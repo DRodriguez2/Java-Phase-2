@@ -12,9 +12,9 @@ public class Query extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	//insert credentials here
-	private static final String URL = "jdbc:mysql://localhost:3306/e-commerce";
-	private final static String USERNAME = "root";
-	private final static String PASSWORD = "*Ta408Q0u3o@~wb";
+	private static final String URL = "";
+	private final static String USERNAME = "";
+	private final static String PASSWORD = "";
 	
 	protected static Connection con;
 	protected static Statement stmnt;
@@ -29,7 +29,7 @@ public class Query extends HttpServlet {
 		
 		try {
 			con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-			pStatement = con.prepareStatement("select * from product where id=?");
+			pStatement = con.prepareStatement("select * from products where id=?");
 			pStatement.setInt(1, id);
 			results = pStatement.executeQuery();
 			if (results.next()) {
