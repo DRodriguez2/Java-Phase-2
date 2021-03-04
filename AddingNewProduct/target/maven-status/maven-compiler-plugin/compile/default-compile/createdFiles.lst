@@ -1,0 +1,6 @@
+hibernateobjects\Product.class
+filters\InsertFilter.class
+sql\insert.class
+hibernateobjects\HibernateUtil.class
+sql\Query.class
+filters\QueryFilter.class

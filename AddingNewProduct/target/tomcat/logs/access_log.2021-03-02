@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [02/Mar/2021:10:15:54 -0500] "GET /AddingNewProduct HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [02/Mar/2021:10:15:58 -0500] "GET /AddingNewProduct/Query?id= HTTP/1.1" 404 995 http-bio-8080-exec-3 7
+0:0:0:0:0:0:0:1 - - [02/Mar/2021:10:20:46 -0500] "GET /AddingNewProduct HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [02/Mar/2021:10:20:48 -0500] "GET /AddingNewProduct/Query?id= HTTP/1.1" 500 1669 http-bio-8080-exec-3 12
+0:0:0:0:0:0:0:1 - - [02/Mar/2021:10:23:02 -0500] "GET /AddingNewProduct HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [02/Mar/2021:10:23:03 -0500] "GET /AddingNewProduct/Query?id= HTTP/1.1" 200 666 http-bio-8080-exec-3 9
+0:0:0:0:0:0:0:1 - - [02/Mar/2021:10:23:06 -0500] "POST /AddingNewProduct/insert HTTP/1.1" 200 666 http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [02/Mar/2021:10:25:12 -0500] "GET /AddingNewProduct/Query?id=1234 HTTP/1.1" 200 673 http-bio-8080-exec-6 1625
+0:0:0:0:0:0:0:1 - - [02/Mar/2021:10:25:20 -0500] "GET /AddingNewProduct/Query?id=4567 HTTP/1.1" 200 667 http-bio-8080-exec-8 9
+0:0:0:0:0:0:0:1 - - [02/Mar/2021:10:25:45 -0500] "POST /AddingNewProduct/insert HTTP/1.1" 200 660 http-bio-8080-exec-9 23
+0:0:0:0:0:0:0:1 - - [02/Mar/2021:10:25:51 -0500] "GET /AddingNewProduct/Query?id=789 HTTP/1.1" 200 666 http-bio-8080-exec-10 7
