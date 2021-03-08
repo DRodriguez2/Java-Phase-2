@@ -27,15 +27,23 @@ public class InsertFilter implements Filter {
 			out.println("<SPAN style='color:red'>Invalid ID </SPAN>");
 			return;
 		}
-		if(request.getParameter("description").length() > 255)  {
+		String description = request.getParameter("description");
+		String name = request.getParameter("name");
+		String price = request.getParameter("price");
+		if(description.isEmpty() || name.isEmpty() || price.isEmpty()) {
+			request.getRequestDispatcher("index.html").include(request, response);
+			out.println("<SPAN style='color:red'>Description, name, or price cannot be left empty</SPAN>");
+			return;
+		}
+		else if(description.length() > 255)  {
 			request.getRequestDispatcher("index.html").include(request, response);
 			out.println("<SPAN style='color:red'>Description exceeds maximum length of 255 characters </SPAN>");
 			return;
-		} else if(request.getParameter("name").length() > 255)  {
+		} else if(name.length() > 255)  {
 			request.getRequestDispatcher("index.html").include(request, response);
 			out.println("<SPAN style='color:red'>Name exceeds maximum length of 255 characters </SPAN>");
 			return;
-		} else if(request.getParameter("price").length() > 4)  {
+		} else if(price.length() > 255)  {
 			request.getRequestDispatcher("index.html").include(request, response);
 			out.println("<SPAN style='color:red'>Price exceeds maximum length of 255 characters </SPAN>");
 			return;
